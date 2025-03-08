@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    background-color: rgb(251, 245, 235);
+}
+
+.dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.stat {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat h3 {
+    font-size: 20px;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: #b73100;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #392C6B;
+}
+
+/* Manage Sections */
+.manage-pets-section,
+.manage-users-section,
+.manage-adoptions-section,
+.manage-content-section,
+.manage-adoption-applications-section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Remove fixed padding */
+    margin-top: 40px;
+}
+
+/* Header for Manage Sections */
+.manage-pets-section h2,
+.manage-users-section h2,
+.manage-adoptions-section h2,
+.manage-content-section h2,
+.manage-adoption-applications-section h2 {
+    font-size: 24px;
+    color: #8B0000;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.add-pet-form,
+.add-user-form,
+.add-adoption-form,
+.add-content-form,
+.add-adoption-application-form {
+    margin-bottom: 20px;
+}
+
+.add-pet-form input[type="text"],
+.add-pet-form input[type="number"],
+.add-pet-form textarea,
+.add-pet-form select, /* Include select element */
+.add-user-form input[type="text"],
+.add-user-form input[type="email"],
+.add-user-form input[type="password"],
+.add-adoption-form input[type="number"],
+.add-content-form input[type="text"],
+.add-content-form textarea,
+.add-adoption-application-form input[type="text"],
+.add-adoption-application-form input[type="number"],
+.add-adoption-application-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+
+.add-pet-form select {
+    appearance: none; /* Remove default appearance */
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3e%3cpath d='M0 0l6 6 6-6H0z' fill='%23000'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px); /* Adjust position of arrow */
+    background-position-y: center;
+    padding-right: 30px; /* Adjust space for arrow */
+}
+
+.add-pet-form input[type="file"],
+.add-adoption-form input[type="file"],
+.add-content-form input[type="file"],
+.add-adoption-application-form input[type="file"] {
+    margin-top: 10px;
+}
+
+.add-pet-form button[type="submit"],
+.add-adoption-form button[type="submit"],
+.add-content-form button[type="submit"],
+.add-adoption-application-form button[type="submit"] {
+    background-color: #b73100;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-pet-form button[type="submit"]:hover,
+.add-adoption-form button[type="submit"]:hover,
+.add-content-form button[type="submit"]:hover,
+.add-adoption-application-form button[type="submit"]:hover {
+    background-color: #392C6B;
+}
+
+/* Table Styles */
+.pet-list table,
+.user-list table,
+.adoption-list table,
+.content-list table,
+.adoption-application-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pet-list table th,
+.pet-list table td,
+.user-list table th,
+.user-list table td,
+.adoption-list table th,
+.adoption-list table td,
+.content-list table th,
+.content-list table td,
+.adoption-application-list table th,
+.adoption-application-list table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pet-list table th,
+.user-list table th,
+.adoption-list table th,
+.content-list table th,
+.adoption-application-list table th {
+    background-color: #f9f9f9;
+    color: #8B0000;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pet-list table td img,
+.user-list table td img,
+.adoption-list table td img,
+.content-list table td img,
+.adoption-application-list table td img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* Anchor Styles Inside Table Cells */
+.pet-list table td a,
+.user-list table td a,
+.adoption-list table td a,
+.content-list table td a,
+.adoption-application-list table td a {
+    color: #b73100;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.pet-list table td a:hover,
+.user-list table td a:hover,
+.adoption-list table td a:hover,
+.content-list table td a:hover,
+.adoption-application-list table td a:hover {
+    color: #392C6B;
+}
